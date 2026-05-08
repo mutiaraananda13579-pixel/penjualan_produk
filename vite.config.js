@@ -4,6 +4,7 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
+  base: '/penjualan_produk/', 
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
@@ -11,12 +12,12 @@ export default defineConfig({
   },
   server: {
     fs: {
-      strict: false, // supaya akses folder root aman
+      strict: false,
     },
   },
   build: {
     rollupOptions: {
-      input: path.resolve(__dirname, 'index.html'), // pastikan input ke index.html
+      input: path.resolve(__dirname, 'index.html'),
     },
   },
 })
